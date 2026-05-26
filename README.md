@@ -4,6 +4,10 @@ A simple and lightweight open-source link hub made with plain HTML, CSS, and Jav
 
 Arbor lets you display a clean list of profile links, social accounts, websites, or any other URLs using data from a JSON file. No frameworks, no dependencies, and easy to customize.
 
+The links given on the GitHub Pages are mere examples, the author doesn't have any affiliantion to any of them.
+Their respective names, logos, links and domains remain their properties and subject to respective licenses.
+This repo simply provides a structured, easy and organised way to present the links.
+
 ---
 
 ## Features
