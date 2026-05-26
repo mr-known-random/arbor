@@ -42,6 +42,7 @@ arbor/
 ├── script.js
 │
 ├── assets/
+│   │   images/
 │   └── links.json
 │
 ├── LICENSE
@@ -243,7 +244,7 @@ If you create something cool with it, consider sharing it.
 
 # Contributing
 
-While contributions, issues, and feature requests are not accepted, since the project is just for funny and personal revision of the web development.
+While contributions, issues, and feature requests are not accepted, since the project is just for fun and personal revision of the web development.
 
 But feel free to:
 
