@@ -30,6 +30,7 @@ function renderLinks(links) {
         link.classList.add("js-link");
         link.href = item.link;
         link.textContent = item.text;
+        link.target = "_blank";
 
         flexItem.appendChild(img);
         flexItem.appendChild(link);
