@@ -1,22 +1,22 @@
 {
     "0" : {
-        "icon" : "#",
-        "text" : "@example1",
-        "link" : "#"
+        "icon" : "./assets/images/0.jpg",
+        "text" : "example.com",
+        "link" : "https://example.com/"
     },
     "1" : {
-        "icon" : "#",
-        "text" : "@example2",
-        "link" : "#"
+        "icon" : "./assets/images/1.png",
+        "text" : "Wikipedia",
+        "link" : "https://www.wikipedia.org/"
     },
     "2" : {
-        "icon" : "#",
-        "text" : "@example3",
-        "link" : "#"
+        "icon" : "./assets/images/2.png",
+        "text" : "Git",
+        "link" : "https://git-scm.com/"
     },
     "3" : {
-        "icon" : "#",
-        "text" : "@example4",
-        "link" : "#"
+        "icon" : "./assets/images/3.png",
+        "text" : "LibreOffice",
+        "link" : "https://www.libreoffice.org/"
     }
 }
