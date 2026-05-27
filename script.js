@@ -33,25 +33,21 @@ fetch('./assets/links.json')
 
 function renderLinks(links) {
     links.forEach(item => {
-        renderLink(item);
+        const flexItem = document.createElement("div");
+        flexItem.classList.add("js-flex-item");
+
+        const img = document.createElement("img");
+        img.classList.add("js-icon");
+        img.src = item.icon;
+
+        const link = document.createElement("a");
+        link.classList.add("js-link");
+        link.href = item.link;
+        link.textContent = item.text;
+        link.target = "_blank";
+
+        flexItem.appendChild(img);
+        flexItem.appendChild(link);
+        flexBox.appendChild(flexItem);
     });
-}
-
-function renderLink(item) {
-    const flexItem = document.createElement("div");
-    flexItem.classList.add("js-flex-item");
-
-    const img = document.createElement("img");
-    img.classList.add("js-icon");
-    img.src = item.icon;
-
-    const link = document.createElement("a");
-    link.classList.add("js-link");
-    link.href = item.link;
-    link.textContent = item.text;
-    link.target = "_blank";
-
-    flexItem.appendChild(img);
-    flexItem.appendChild(link);
-    flexBox.appendChild(flexItem);
 }
