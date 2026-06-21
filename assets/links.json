@@ -22,5 +22,11 @@
         "text" : "LibreOffice",
         "link" : "https://www.libreoffice.org/",
         "category" : "open-source-software"
+    },
+    "4" : {
+        "icon" : "./assets/images/4.png",
+        "text" : "Python",
+        "link" : "https://www.python.org/",
+        "category" : "programming-language"
     }
 }
