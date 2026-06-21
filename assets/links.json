@@ -2,21 +2,25 @@
     "0" : {
         "icon" : "./assets/images/0.jpg",
         "text" : "example.com",
-        "link" : "https://example.com/"
+        "link" : "https://example.com/",
+        "category" : "community-driven-project"
     },
     "1" : {
         "icon" : "./assets/images/1.png",
         "text" : "Wikipedia",
-        "link" : "https://www.wikipedia.org/"
+        "link" : "https://www.wikipedia.org/",
+        "category" : "community-driven-project"
     },
     "2" : {
         "icon" : "./assets/images/2.png",
         "text" : "Git",
-        "link" : "https://git-scm.com/"
+        "link" : "https://git-scm.com/",
+        "category" : "open-source-software"
     },
     "3" : {
         "icon" : "./assets/images/3.png",
         "text" : "LibreOffice",
-        "link" : "https://www.libreoffice.org/"
+        "link" : "https://www.libreoffice.org/",
+        "category" : "open-source-software"
     }
 }

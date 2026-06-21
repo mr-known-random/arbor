@@ -1,4 +1,5 @@
 const searchInput = document.getElementById("js-search-input");
+const categorySelect = document.getElementById("categories");
 const flexBox = document.querySelector(".js-flex-box");
 
 fetch('./assets/links.json')
@@ -11,25 +12,47 @@ fetch('./assets/links.json')
     .then(data => {
         // Convert object → array
         const linkArray = Object.values(data);
+
+        // Get unique categories
+        const categories = [...new Set(linkArray.map(item => item.category))].sort((a, b) => a.localeCompare(b));
+
+        // Build dropdown
+        categories.forEach(category => {
+            const option = document.createElement("option");
+            option.value = category;
+            option.textContent = formatCategory(category);
+            categorySelect.appendChild(option);
+        });
+
         // Show all links initially
         renderLinks(linkArray);
         // Search functionality
-        searchInput.addEventListener("keyup", (e) => {
-            const searchText = e.target.value.trim().toLowerCase();
-            // Filter matching items
-            const filteredLinks = linkArray.filter(item =>
-                item.text.toLowerCase().includes(searchText)
-            );
-            // Clear current links
+        function filterLinks() {
+            const searchText = searchInput.value.trim().toLowerCase();
+            const selectedCategory = categorySelect.value;
+
+            const filteredLinks = linkArray.filter(item => {
+                const matchesText =
+                    item.text.toLowerCase().includes(searchText);
+
+                const matchesCategory =
+                    selectedCategory === "all" ||
+                    item.category === selectedCategory;
+
+                return matchesText && matchesCategory;
+            });
+
             flexBox.replaceChildren();
-            // Render filtered links
             renderLinks(filteredLinks);
-        });
+        }
+
+        searchInput.addEventListener("keyup", filterLinks);
+        categorySelect.addEventListener("change", filterLinks);
     })
     .catch(error => {
         console.error('Error fetching the JSON file:', error);
     }
-);
+    );
 
 function renderLinks(links) {
     links.forEach(item => {
@@ -50,4 +73,11 @@ function renderLinks(links) {
         flexItem.appendChild(link);
         flexBox.appendChild(flexItem);
     });
+}
+
+function formatCategory(str) {
+    return str
+        .split("-")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 }

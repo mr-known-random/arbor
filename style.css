@@ -19,6 +19,20 @@ h1 {
     text-align: center;
 }
 
+.category-drop-down {
+    text-align: center;
+}
+#categories {
+    border: none;
+    border-radius: 50px;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 1px 1px 5px black;
+}
+#categories:focus {
+    outline: none;
+}
+
 .search-bar {
     text-align: center;
     margin: 20px auto;
